@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #121212;
+  line-height: 1.4;
+  @apply text-base;
+}
+
+.light {
+  transition: 0.25s;
+  @apply bg-white text-black;
+
+  .display-mode__icon {
+    @apply text-black;
+  }
+
+  .about {
+    @apply text-grass;
+  }
+
+  .work {
+    @apply text-tangerine;
+  }
+
+  .photos {
+    @apply text-cerulean;
+  }
+
+  .resume {
+    @apply text-rose;
+  }
+}
+
+.dark {
+  transition: 0.25s;
+  @apply bg-dark text-white;
+
+  .display-mode__icon {
+    @apply text-white;
+  }
+
+  .about {
+    @apply text-mint;
+  }
+
+  .work {
+    @apply text-cantaloupe;
+  }
+
+  .photos {
+    @apply text-steel;
+  }
+
+  .resume {
+    @apply text-coral;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ovo";
+}
+
+.category {
+  @apply px-8 py-2 my-1 text-center opacity-100 cursor-pointer font-light;
+
+  &:hover {
+    @apply underline;
+  }
+}
