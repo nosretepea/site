@@ -60,14 +60,29 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Ovo";
 }
 
 .category {
-  @apply px-8 py-2 my-1 text-center opacity-100 cursor-pointer font-light;
+  @apply mx-8 my-2 my-1 text-center opacity-100 cursor-pointer font-light;
 
   &:hover {
     @apply underline;
   }
+}
+
+.centered {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.icon {
+  height: 40px;
 }

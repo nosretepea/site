@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const defaultContextValue = {
   data: {
@@ -6,7 +6,7 @@ const defaultContextValue = {
     isHoveringOnDisplayModeIcon: false
   },
   set: () => { },
-}
+};
 
 const { Provider, Consumer } = React.createContext(defaultContextValue);
 
@@ -33,6 +33,6 @@ class ContextProviderComponent extends React.Component {
   render() {
     return <Provider value={this.state.data}>{this.props.children}</Provider>
   }
-}
+};
 
-export { Consumer as default, ContextProviderComponent }
+export { Consumer as default, ContextProviderComponent };

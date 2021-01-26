@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const AboutPage  = ({ data, path }) => (
   <div className="flex justify-center items-center">
@@ -12,6 +12,6 @@ const AboutPage  = ({ data, path }) => (
         </p>
     </div>
   </div>
-)
+);
 
-export default AboutPage
+export default AboutPage;
