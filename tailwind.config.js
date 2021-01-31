@@ -23,7 +23,7 @@ module.exports = {
         'sunflower': {
           DEFAULT: '#f5e06a',
         },
-        'margiold': {
+        'marigold': {
           DEFAULT: '#ebbd05',
         },
         'coral': {

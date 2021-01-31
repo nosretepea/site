@@ -3,7 +3,7 @@ import React from "react";
 const ResumePage  = ({ data, path }) => (
   <div className="flex justify-center items-center">
     <div className="w-1/2">
-      <h2 className="py-2 text-xl sm:text-2xl lg:text-5xl font-bold text-rose">résumé</h2>
+      <h2 className="resume py-2 text-xl sm:text-2xl lg:text-5xl font-bold">résumé</h2>
       <p className="font-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
