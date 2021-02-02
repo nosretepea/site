@@ -1,7 +1,7 @@
 import React from "react";
 
 const PhotosPage = ({ data, path }) => (
-  <div className="flex justify-center items-center">
+  <div className="w-full flex justify-center items-center">
     <div className="w-1/2">
       <h2 className="photos py-2 text-xl sm:text-2xl lg:text-5xl font-bold">photos</h2>
       <p className="font-light">

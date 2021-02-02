@@ -20,7 +20,7 @@ module.exports = {
       options: {
         fonts: [
           `Ovo\:300,400,900`,
-          `Open Sas\:300,300i,400,400i`
+          `Open Sans\:300,300i,400,400i`
         ],
       },
     },

@@ -1,8 +1,9 @@
 import React from "react";
+import Footer from "../components/footer";
 
 const AboutPage = ({ data, path }) => (
-  <div className={`flex justify-center items-center`}>
-    <div className="w-1/2">
+  <div className="w-full flex justify-center items-center">
+    <div className="content-container w-1/2">
       <h2 className="about py-2 text-xl sm:text-2xl lg:text-5xl font-bold">about</h2>
       <p className="font-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -11,6 +12,7 @@ const AboutPage = ({ data, path }) => (
         laborum
       </p>
     </div>
+    <Footer />
   </div>
 );
 

@@ -16,7 +16,7 @@ const IndexPage = ({ data, path }) => {
         <div className="flex flex-grow flex-col justify-center">
           <div className="flex flex-grow flex-col justify-center text-center">
             <div>
-              <h1 className="text-xl sm:text-3xl lg:text-6xl font-bold lowercase">Ashley Peterson</h1>
+              <h1 className="name text-xl sm:text-3xl lg:text-6xl font-bold lowercase">Ashley Peterson</h1>
               <p className="pt-4 font-light">
                 software developer, music enthusiast, cat lover, runner, and coffee addict based in Austin, TX<br />
               </p>
@@ -25,14 +25,12 @@ const IndexPage = ({ data, path }) => {
               <Link to={`/about`} className="category about text-base sm:text-xl lg:text-3xl">
                 <Tab section='about' />
               </Link>
-              <Link to={`/work`} className="category work text-base sm:text-xl lg:text-3xl">
-                <Tab section='work' />
-              </Link>
               <Link to={`/photos`} className="category photos text-base sm:text-xl lg:text-3xl">
                 <Tab section='photos' />
               </Link>
               <a className="category resume text-base sm:text-xl lg:text-3xl"
                 href="https://docs.google.com/document/d/1_qPgRIDe6HUI35ZE7yltQQK3NJYFk-iykZDMM4vYuZw/"
+                rel="noreferrer"
                 target="_blank">
                 <Tab section='résumé' />
               </a>
@@ -45,12 +43,12 @@ const IndexPage = ({ data, path }) => {
               </a>
             </div>
             <div className="icon px-2">
-              <a target="_blank" href="https://www.linkedin.com/in/ashley-peterson-24387814a/">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ashley-peterson-24387814a/">
                 <img className="h-full" src={theme.displayMode === 'dark' ? LinkedinDark : LinkedinLight} alt="linkedin" />
               </a>
             </div>
             <div className="icon px-2">
-              <a target="_blank" href="https://www.github.com/nosretepea">
+              <a target="_blank" rel="noreferrer" href="https://www.github.com/nosretepea">
                 <img className="h-full" src={theme.displayMode === 'dark' ? GithubDark : GithubLight} alt="github" />
               </a>
             </div>

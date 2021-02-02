@@ -18,20 +18,28 @@ body {
     @apply text-black;
   }
 
+  .name {
+    @apply text-black;
+  }
+
+  .home {
+    @apply text-cerulean;
+  }
+
   .about {
     @apply text-tangerine;
   }
 
-  .work {
+  .photos {
     @apply text-grass;
   }
 
-  .photos {
+  .resume {
     @apply text-rose;
   }
 
-  .resume {
-    @apply text-cerulean;
+  .footer {
+    @apply bg-white;
   }
 }
 
@@ -43,20 +51,28 @@ body {
     @apply text-white;
   }
 
+  .name {
+    @apply text-white;
+  }
+
+  .home {
+    @apply text-steel;
+  }
+
   .about {
     @apply text-cantaloupe;
   }
 
-  .work {
+  .photos {
     @apply text-mint;
   }
 
-  .photos {
+  .resume {
     @apply text-coral;
   }
 
-  .resume {
-    @apply text-steel;
+  .footer {
+    @apply bg-dark-300;
   }
 }
 
@@ -65,8 +81,23 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.name {
   font-family: "Ovo";
+}
+
+.content-container {
+  max-height: 650px;
+}
+
+.footer {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+  &__link {
+    &:hover {
+      @apply underline;
+    }
+  }
 }
 
 .category {

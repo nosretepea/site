@@ -7,6 +7,6 @@ export default class Tab extends React.Component {
       <div>
         {section}
       </div>
-    )
+    );
   }
 };
