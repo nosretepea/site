@@ -18,7 +18,7 @@ const IndexPage = ({ data, path }) => {
             <div>
               <h1 className="text-xl sm:text-3xl lg:text-6xl font-bold lowercase">Ashley Peterson</h1>
               <p className="pt-4 font-light">
-                software developer, music enthusiast, cat lover, runner, and coffee addict based in Austin, TX<br/>
+                software developer, music enthusiast, cat lover, runner, and coffee addict based in Austin, TX<br />
               </p>
             </div>
             <div className="flex justify-center py-4">
@@ -31,20 +31,28 @@ const IndexPage = ({ data, path }) => {
               <Link to={`/photos`} className="category photos text-base sm:text-xl lg:text-3xl">
                 <Tab section='photos' />
               </Link>
-              <Link to={`/resume`} className="category resume text-base sm:text-xl lg:text-3xl">
+              <a className="category resume text-base sm:text-xl lg:text-3xl"
+                href="https://docs.google.com/document/d/1_qPgRIDe6HUI35ZE7yltQQK3NJYFk-iykZDMM4vYuZw/"
+                target="_blank">
                 <Tab section='résumé' />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="centered flex justify-center bottom-0 px-4 py-2">
             <div className="icon px-2">
-              <a href="mailto:nosretepea@gmail.com"><img className="h-full" src={theme.displayMode === 'dark' ? MailDark : MailLight} alt="email" /></a>
+              <a href="mailto:nosretepea@gmail.com">
+                <img className="h-full" src={theme.displayMode === 'dark' ? MailDark : MailLight} alt="email" />
+              </a>
             </div>
             <div className="icon px-2">
-              <a href="https://www.linkedin.com/in/ashley-peterson-24387814a/"><img className="h-full" src={theme.displayMode === 'dark' ? LinkedinDark : LinkedinLight} alt="linkedin" /></a>
+              <a target="_blank" href="https://www.linkedin.com/in/ashley-peterson-24387814a/">
+                <img className="h-full" src={theme.displayMode === 'dark' ? LinkedinDark : LinkedinLight} alt="linkedin" />
+              </a>
             </div>
             <div className="icon px-2">
-              <a href="https://www.github.com/nosretepea"><img className="h-full" src={theme.displayMode === 'dark' ? GithubDark : GithubLight} alt="github" /></a>
+              <a target="_blank" href="https://www.github.com/nosretepea">
+                <img className="h-full" src={theme.displayMode === 'dark' ? GithubDark : GithubLight} alt="github" />
+              </a>
             </div>
           </div>
         </div>

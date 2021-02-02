@@ -19,19 +19,19 @@ body {
   }
 
   .about {
-    @apply text-grass;
-  }
-
-  .work {
     @apply text-tangerine;
   }
 
+  .work {
+    @apply text-grass;
+  }
+
   .photos {
-    @apply text-cerulean;
+    @apply text-rose;
   }
 
   .resume {
-    @apply text-rose;
+    @apply text-cerulean;
   }
 }
 
@@ -44,19 +44,19 @@ body {
   }
 
   .about {
-    @apply text-mint;
-  }
-
-  .work {
     @apply text-cantaloupe;
   }
 
+  .work {
+    @apply text-mint;
+  }
+
   .photos {
-    @apply text-steel;
+    @apply text-coral;
   }
 
   .resume {
-    @apply text-coral;
+    @apply text-steel;
   }
 }
 
