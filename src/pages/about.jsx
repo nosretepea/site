@@ -3,8 +3,8 @@ import Footer from "../components/footer";
 
 const AboutPage = ({ data, path }) => (
   <div className="w-full flex justify-center items-center">
-    <div className="content-container w-1/2">
-      <h2 className="about py-2 text-xl sm:text-2xl lg:text-5xl font-bold">about</h2>
+    <div className="h-4/5 w-full lg:w-4/5 mx-auto px-4">
+      <h2 className="about py-2 text-5xl font-bold">about</h2>
       <p className="font-light">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit

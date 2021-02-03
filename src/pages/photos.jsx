@@ -1,19 +1,55 @@
 import React from "react";
 import Footer from "../components/footer";
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Lightbox from '../components/lightbox.jsx'
+
+export const query = graphql`
+  query {
+    allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "photography"}} sort: {fields: [name], order: DESC}) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(quality: 100) { ...GatsbyImageSharpFluid }
+          }
+        }
+      }
+    }
+  }
+`;
 
 const PhotosPage = ({ data, path }) => (
   <div className="w-full flex justify-center items-center">
-    <div className="w-1/2">
-      <h2 className="photos py-2 text-xl sm:text-2xl lg:text-5xl font-bold">photos</h2>
-      <p className="font-light">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum
-        </p>
+    <div className="h-4/5 w-full lg:w-4/5 mx-auto px-4">
+      <h2 className="photos py-3 text-5xl font-bold">photos</h2>
+      <div className="images-container grid grid-cols-4 gap-2">
+        {data.allFile.edges.map((edge, index) => (
+          <div className="image">
+            <Img fluid={{ ...edge.node.childImageSharp.fluid, aspectRatio: edge.node.childImageSharp.fluid.aspectRatio }} />
+          </div>
+        ))}
+      </div>
     </div>
     <Footer />
   </div>
 );
 
 export default PhotosPage;
+
+/*< div className = {`section_box__content`}>
+  <div className={`section_box__content__inner fade_in__fast`}>
+    <div className={`paragraph`}>
+      All photos taken with my Samsung Galaxy S8+. I wasn't joking when I said amateur.
+                <br />
+                Click an image to enlarge it.
+              </div>
+    <div className={`image_container`}>
+      {data.allFile.edges.map((edge, index) => (
+        <div key={`img_` + index} className={styles.image} onClick={() => this.handleImageClick(index)}>
+          <Img fluid={{ ...edge.node.childImageSharp.fluid, aspectRatio: edge.node.childImageSharp.fluid.aspectRatio }} />
+        </div>
+      ))}
+    </div>
+  </div>
+{ this.state.showLightbox ? <Lightbox data={data} index={this.state.photoIndex} onToggleLightbox={this.toggleLightbox} /> : null }
+      </div >*/

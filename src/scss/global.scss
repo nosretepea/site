@@ -86,10 +86,6 @@ h6,
   font-family: "Ovo";
 }
 
-.content-container {
-  max-height: 650px;
-}
-
 .footer {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   animation: slide-up 0.5s cubic-bezier(0.4, 0, 0.2, 1) backwards;
@@ -121,6 +117,16 @@ h6,
     opacity: 0.5;
     transition: 0.5s;
   }
+}
+
+.images-container {
+  height: 650px;
+  @apply overflow-y-scroll py-2;
+}
+
+.image {
+  max-width: 283.67px;
+  @apply cursor-pointer m-2;
 }
 
 @keyframes slide-up {
