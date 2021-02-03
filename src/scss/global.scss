@@ -92,6 +92,7 @@ h6,
 
 .footer {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  animation: slide-up 0.5s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 
   &__link {
     &:hover {
@@ -119,5 +120,14 @@ h6,
   &:hover {
     opacity: 0.5;
     transition: 0.5s;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

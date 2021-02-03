@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/footer";
 
 const PhotosPage = ({ data, path }) => (
   <div className="w-full flex justify-center items-center">
@@ -11,6 +12,7 @@ const PhotosPage = ({ data, path }) => (
         laborum
         </p>
     </div>
+    <Footer />
   </div>
 );
 
