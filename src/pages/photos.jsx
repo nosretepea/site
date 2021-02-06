@@ -13,15 +13,14 @@ export default class PhotosPage extends React.Component {
     };
   }
 
-  handleImageClick = (index, childProps, event) => {
-    console.log('index is: ' + index);
+  handleImageClick = (index) => {
     this.setState({
       photoIndex: index
     });
-    this.toggleLightbox(childProps, event);
+    this.toggleLightbox();
   }
 
-  toggleLightbox = (childProps, event) => {
+  toggleLightbox = () => {
     this.setState({
       showLightbox: !this.state.showLightbox,
     });
@@ -49,13 +48,13 @@ export default class PhotosPage extends React.Component {
               <h2 className="photos py-3 text-5xl font-bold">photos</h2>
               <div className="images-container grid grid-cols-4 gap-2">
                 {data.allFile.edges.map((edge, index) => (
-                  <div key={`img_`+index} className="image">
+                  <div key={`img_` + index} className="image" onClick={() => this.handleImageClick(index)}>
                     <Img fluid={{ ...edge.node.childImageSharp.fluid, aspectRatio: edge.node.childImageSharp.fluid.aspectRatio }} />
                   </div>
                 ))}
               </div>
             </div>
-            {this.state.showLightbox ? <Lightbox data={data} index={this.state.photoIndex} onToggleLightbox={this.toggleLightbox} /> : null}
+            {this.state.showLightbox ? <Lightbox images={data.allFile.edges} index={this.state.photoIndex} onToggleLightbox={this.toggleLightbox} /> : null}
             <Footer />
           </div>
         )}

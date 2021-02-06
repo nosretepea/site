@@ -1,26 +1,24 @@
 import * as React from "react";
 import Img from 'gatsby-image'
-import * as styles from '../scss/lightbox.module.scss'
 
 export default class Lightbox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       currentIndex: this.props.index,
-      length: this.props.data.allFile.edges.length,
+      length: this.props.images.length,
     };
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     document.addEventListener('keydown', this.detectKeyDown, false);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     document.removeEventListener('keydown', this.detectKeyDown, false);
   }
 
-  detectKeyDown(e) {
-    console.log('got in detectKeyDown')
+  detectKeyDown = (e) => {
     switch (e.keyCode) {
       case 27:
         this.props.onToggleLightbox();
@@ -35,7 +33,7 @@ export default class Lightbox extends React.Component {
     }
   }
 
-  changeSlide(direction) {
+  changeSlide = (direction) => {
     let newCurrentIndex = this.state.currentIndex;
     if (this.state.currentIndex + direction === -1) {
       newCurrentIndex = this.state.length;
@@ -50,19 +48,13 @@ export default class Lightbox extends React.Component {
 
   render() {
     return (
-      <div className={styles.lightbox}>
-        <span className={styles.close} onClick={this.props.onToggleLightbox}>&times;</span>
-        <div className={styles.lightbox__main}>
-          <div className={styles.image_container}>
-            {this.props.data.allFile.edges.map((edge, index) => (
-              <div key={`lightbox_img_` + index} className={index === this.state.currentIndex ? `${styles.image}` : `${styles.image} ${styles.hidden}`}>
-                <Img fluid={{ ...edge.node.childImageSharp.fluid }} />
-              </div>
-            ))}
-          </div>
-          <button className={styles.prev} onKeyDown={(e) => this.detectKeyDown(e)} onClick={() => this.changeSlide(-1)}>&#10094;</button>
-          <button className={styles.next} onKeyDown={(e) => this.detectKeyDown(e)} onClick={() => this.changeSlide(1)}>&#10095;</button>
+      <div className="lightbox fixed z-10 left-0 top-0 w-full h-full overflow-auto">
+        <span className="cursor-pointer text-white text-5xl fixed right-0 px-3" onClick={() => this.props.onToggleLightbox()}>&times;</span>
+        <div class="h-full flex justify-center items-center">
+          <Img fluid={this.props.images[this.state.currentIndex].node.childImageSharp.fluid} style={{ width: "800px" }} />
         </div>
+        <span className="prev" onKeyDown={(e) => this.detectKeyDown(e)} onClick={() => this.changeSlide(-1)}>&#10094;</span>
+        <span className="next" onKeyDown={(e) => this.detectKeyDown(e)} onClick={() => this.changeSlide(1)}>&#10095;</span>
       </div>
     );
   }
