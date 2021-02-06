@@ -46,7 +46,7 @@ export default class PhotosPage extends React.Component {
           <div className="w-full flex justify-center items-center" >
             <div className="h-4/5 w-full lg:w-4/5 mx-auto px-4">
               <h2 className="photos py-3 text-5xl font-bold">photos</h2>
-              <div className="images-container grid grid-cols-4 gap-2">
+              <div className="images-container grid grid-cols-1 md:grid-cols-4 md:gap-2">
                 {data.allFile.edges.map((edge, index) => (
                   <div key={`img_` + index} className="image" onClick={() => this.handleImageClick(index)}>
                     <Img fluid={{ ...edge.node.childImageSharp.fluid, aspectRatio: edge.node.childImageSharp.fluid.aspectRatio }} />

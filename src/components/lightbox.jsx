@@ -49,9 +49,14 @@ export default class Lightbox extends React.Component {
   render() {
     return (
       <div className="lightbox fixed z-10 left-0 top-0 w-full h-full overflow-auto">
-        <span className="cursor-pointer text-white text-5xl fixed right-0 px-3" onClick={() => this.props.onToggleLightbox()}>&times;</span>
-        <div class="h-full flex justify-center items-center">
-          <Img fluid={this.props.images[this.state.currentIndex].node.childImageSharp.fluid} style={{ width: "800px" }} />
+        <span className="cursor-pointer text-white text-5xl fixed left-0 px-3" onClick={() => this.props.onToggleLightbox()}>&times;</span>
+        <div className="h-full flex justify-center items-center">
+          <div className="lightbox-image__container">
+            <Img
+              fluid={this.props.images[this.state.currentIndex].node.childImageSharp.fluid}
+              imgStyle={{ objectFit: 'contain' }}
+            />
+          </div>
         </div>
         <span className="prev" onKeyDown={(e) => this.detectKeyDown(e)} onClick={() => this.changeSlide(-1)}>&#10094;</span>
         <span className="next" onKeyDown={(e) => this.detectKeyDown(e)} onClick={() => this.changeSlide(1)}>&#10095;</span>

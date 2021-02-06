@@ -125,23 +125,16 @@ h6,
 }
 
 .image {
-  max-width: 283.67px;
   @apply cursor-pointer m-2;
 }
 
 .lightbox {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.image-lightbox {
-  width: 600px;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .prev,
 .next {
-  @apply cursor-pointer absolute p-4 bg-transparent border-none text-white text-3xl;
-  top: 50%;
-  margin-top: -50px;
+  @apply cursor-pointer absolute p-4 bg-transparent border-none text-white text-3xl top-1/2;
 }
 
 .prev {
@@ -163,10 +156,26 @@ h6,
   }
 }
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+@media (max-width: 639px) {
+  .lightbox-image__container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .lightbox-image__container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1499px) {
+  .lightbox-image__container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .lightbox-image__container {
+    width: 70%;
+  }
 }
