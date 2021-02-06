@@ -17,6 +17,12 @@ export default class Footer extends React.Component {
             <Link to={`/photos`} className="photos footer__link mx-4">
               <span>photos</span>
             </Link>
+            <a className="resume footer__link mx-4"
+              href="https://docs.google.com/document/d/1_qPgRIDe6HUI35ZE7yltQQK3NJYFk-iykZDMM4vYuZw/"
+              rel="noreferrer"
+              target="_blank">
+              <span>résumé</span>
+            </a>
           </div>
           <div className="">
             <Social height={'small'} />
