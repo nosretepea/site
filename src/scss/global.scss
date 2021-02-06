@@ -10,6 +10,10 @@ body {
   @apply text-base;
 }
 
+p {
+  @apply py-1 font-light;
+}
+
 .light {
   transition: 0.25s;
   @apply bg-white text-black;
@@ -112,15 +116,26 @@ h6,
 }
 
 .icon {
-  height: 40px;
   &:hover {
     opacity: 0.5;
     transition: 0.5s;
   }
+
+  &__regular {
+    height: 40px;
+  }
+
+  &__small {
+    height: 30px;
+  }
+
+  img {
+    min-width: 30px;
+  }
 }
 
 .images-container {
-  height: 650px;
+  height: 600px;
   @apply overflow-y-scroll py-2;
 }
 
