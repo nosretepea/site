@@ -13,17 +13,17 @@ export default class Social extends React.Component {
       <LayoutContext.Consumer>
         {theme => (
           <div className="flex">
-            <div className={`icon icon__${this.props.height} px-2`}>
+            <div className={`icon icon__${this.props.height} mx-2 md:mx-4`}>
               <a href="mailto:nosretepea@gmail.com">
                 <img className="h-full" src={theme.displayMode === 'dark' ? MailDark : MailLight} alt="email" />
               </a>
             </div>
-            <div className={`icon icon__${this.props.height} px-2`}>
+            <div className={`icon icon__${this.props.height} mx-2 md:mx-4`}>
               <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ashley-peterson-24387814a/">
                 <img className="h-full" src={theme.displayMode === 'dark' ? LinkedinDark : LinkedinLight} alt="linkedin" />
               </a>
             </div>
-            <div className={`icon icon__${this.props.height} px-2`}>
+            <div className={`icon icon__${this.props.height} mx-2 md:mx-4`}>
               <a target="_blank" rel="noreferrer" href="https://www.github.com/nosretepea">
                 <img className="h-full" src={theme.displayMode === 'dark' ? GithubDark : GithubLight} alt="github" />
               </a>

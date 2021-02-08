@@ -12,8 +12,8 @@ const IndexPage = ({ data, path }) => {
           <div className="flex flex-grow flex-col justify-center text-center">
             <div>
               <h1 className="name text-5xl xl:text-6xl font-bold lowercase">Ashley Peterson</h1>
-              <p className="pt-4 font-light">
-                software developer, music enthusiast, cat lover, runner, and coffee addict based in Austin, TX<br />
+              <p className="text-lg md:text-base pt-4 px-4 sm:px-12 lg:px-4 font-light">
+                software engineer, music enthusiast, cat lover, runner, and coffee addict based in Austin, TX<br />
               </p>
             </div>
             <div className="flex justify-center py-4">

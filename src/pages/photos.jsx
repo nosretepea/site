@@ -51,7 +51,13 @@ export default class PhotosPage extends React.Component {
               </p>
               <div className="images-container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 md:gap-2">
                 {data.allFile.edges.map((edge, index) => (
-                  <div key={`img_` + index} className="image" onClick={() => this.handleImageClick(index)}>
+                  <div 
+                    role="button"
+                    tabIndex={index}
+                    key={`img_` + index}
+                    className="image"
+                    onClick={() => this.handleImageClick(index)}
+                    onKeyDown={() => this.handleImageClick(index)}>
                     <Img fluid={{ ...edge.node.childImageSharp.fluid, aspectRatio: edge.node.childImageSharp.fluid.aspectRatio }} />
                   </div>
                 ))}
