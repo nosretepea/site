@@ -12,11 +12,11 @@ const AboutPage = ({ data, path }) => (
         </p>
         <p>I was born in Raleigh, North Carolina, but moved to Henderson, Nevada, when I was about eight years old.</p>
         <p>
-          At seventeen, I moved to St. Louis, Missouri, where I ultimately graduated from Washington University in St. Louis with 
+          At seventeen, I moved to St. Louis, Missouri, where I ultimately graduated from Washington University in St. Louis with
           a Bachelor of Science in Computer Science and a Minor in Writing.
         </p>
         <p>
-          When I'm not programming, I'm usually running around Lady Bird Lake, taking a leisurely walk, or cooking a new recipe. 
+          When I'm not programming, I'm usually running around Lady Bird Lake, taking a leisurely walk, or cooking a new recipe.
           Recently, I've been trying to make more vegetarian dishes.
         </p>
         <p>

@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Ashley Peterson`,
-    description: `Ashley Peterson's personal website`,
+    defaultTitle: `Ashley Peterson`,
+    defaultDescription: `Ashley Peterson's personal website`,
+    defaultImage: `/flower.jpg`,
+    siteUrl: `https://nosretepea.github.io`,
     author: `@nosretepea`,
   },
   plugins: [
