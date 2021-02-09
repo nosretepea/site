@@ -3,7 +3,7 @@ module.exports = {
     defaultTitle: `Ashley Peterson`,
     defaultDescription: `Ashley Peterson's personal website`,
     defaultImage: `/flower.jpg`,
-    siteUrl: `https://nosretepea.github.io`,
+    siteUrl: `https://needstobetheproductionurl.com`,
     author: `@nosretepea`,
   },
   plugins: [

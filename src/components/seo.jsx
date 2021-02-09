@@ -49,7 +49,7 @@ SEO.defaultProps = {
 };
 
 const query = graphql`
-  query SEO {
+  query {
     site {
       siteMetadata {
         defaultTitle

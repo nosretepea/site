@@ -1,6 +1,7 @@
 import * as React from "react";
 import { IconContext } from "react-icons";
 import { BsBrightnessLow, BsBrightnessLowFill } from "react-icons/bs";
+import SEO from "../components/seo";
 
 const defaultState = {
   displayMode: 'light'
@@ -51,6 +52,7 @@ export default class Layout extends React.Component {
 
     return (
       <LayoutContext.Provider value={this.state}>
+        <SEO />
         <div className={`${this.state.displayMode} flex h-screen p-2`}>
           <div className="absolute right-0 px-4 py-2">
             <IconContext.Provider value={{ className: "display-mode__icon", size: '1.5em' }}>
@@ -62,7 +64,7 @@ export default class Layout extends React.Component {
                 onMouseEnter={this.handleHover}
                 onMouseLeave={this.handleHover}
                 tabIndex={0}>
-                  {this.state.isHoveringOnDisplayModeIcon ? <BsBrightnessLowFill /> : <BsBrightnessLow />}
+                {this.state.isHoveringOnDisplayModeIcon ? <BsBrightnessLowFill /> : <BsBrightnessLow />}
               </div>
             </IconContext.Provider>
           </div>
