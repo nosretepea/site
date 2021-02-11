@@ -41,5 +41,11 @@ module.exports = {
         component: require.resolve(`./src/components/layout.jsx`),
       },
     },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "nosretepea-personal-site",
+      },
+    }
   ],
 }
