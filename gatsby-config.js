@@ -3,7 +3,7 @@ module.exports = {
     defaultTitle: `Ashley Peterson`,
     defaultDescription: `Ashley Peterson's personal website`,
     defaultImage: `/flower.jpg`,
-    siteUrl: `https://needstobetheproductionurl.com`,
+    siteUrl: `https://ashleyp.io`,
     author: `@nosretepea`,
   },
   plugins: [
@@ -45,6 +45,8 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: "nosretepea-personal-site",
+        protocol: "https",
+        hostname: "ashleyp.io",
       },
     }
   ],
