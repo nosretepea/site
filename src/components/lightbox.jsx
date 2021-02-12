@@ -49,13 +49,13 @@ export default class Lightbox extends React.Component {
   render() {
     return (
       <div className="lightbox fixed z-10 left-0 top-0 w-full h-full overflow-auto">
-        <span 
+        <span
           role="button"
           tabIndex={0}
           className="cursor-pointer text-white text-5xl fixed left-0 px-3"
           onClick={() => this.props.onToggleLightbox()}
-          onKeyDown={this.props.onToggleLightbox()}>
-            &times;
+          onKeyDown={() => this.props.onToggleLightbox()}>
+          &times;
         </span>
         <div className="h-full flex justify-center items-center">
           <div className="lightbox-image__container">
