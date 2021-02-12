@@ -48,6 +48,12 @@ module.exports = {
         protocol: "https",
         hostname: "ashleyp.io",
       },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: "https://ashleyp.io",
+      }
     }
   ],
 }
