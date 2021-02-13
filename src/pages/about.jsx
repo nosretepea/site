@@ -3,14 +3,14 @@ import Footer from "../components/footer";
 
 const AboutPage = ({ data, path }) => (
   <div className="w-full flex justify-center items-center">
-    <div className="h-4/5 w-full lg:w-5/6 xl:w-4/5 mx-auto px-4">
+    <div className="h-auto md:h-4/5 w-full lg:w-5/6 xl:w-4/5 mx-auto px-4">
       <h2 className="about py-3 text-5xl font-bold">about</h2>
-      <div className="w-full text-lg md:text-base md:w-2/3 py-1">
+      <div className="content-container w-full md:w-2/3">
         <p>Hello! I'm Ashley, a software engineer currently living in Austin, Texas.</p>
         <p>I am currently working at <a href="https://www.aceable.com/" rel="noreferrer" target="_blank" className="underline">Aceable</a>,
           an e-learning company that provides accredited licensing courses to help people achieve their goals.
         </p>
-        <p>I was born in Raleigh, North Carolina, but moved to Henderson, Nevada, when I was about eight years old.</p>
+        <p>I was born in Raleigh, North Carolina, but moved to Henderson, Nevada, when I was almost eight years old.</p>
         <p>
           At seventeen, I moved to St. Louis, Missouri, where I ultimately graduated from Washington University in St. Louis with
           a Bachelor of Science in Computer Science and a Minor in Writing.

@@ -1,13 +1,12 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import Social from "./social";
 
 export default class Footer extends React.Component {
   render() {
     return (
       <div className="footer w-full fixed z-1 bottom-0 p-4">
         <div className="mx-auto flex justify-center items-center w-full">
-          <div className="text-sm md:text-lg">
+          <div className="text-lg">
             <Link to={`/`} className="home mx-2 md:mx-4">
               <span>home</span>
             </Link>
@@ -23,9 +22,6 @@ export default class Footer extends React.Component {
               target="_blank">
               <span>résumé</span>
             </a>
-          </div>
-          <div>
-            <Social height={'small'} />
           </div>
         </div>
       </div>

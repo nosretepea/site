@@ -14,6 +14,10 @@ p {
   @apply py-1;
 }
 
+*:focus {
+  outline: 0 !important;
+}
+
 .light {
   transition: 0.25s;
   @apply bg-white text-black;
@@ -123,19 +127,14 @@ h6,
 
   &__regular {
     height: 40px;
-  }
-
-  &__small {
-    height: 30px;
-  }
-
-  img {
-    min-width: 30px;
+    img {
+      min-width: 40px;
+    }
   }
 }
 
-.images-container {
-  height: 600px;
+.content-container {
+  max-height: 600px;
   @apply overflow-y-scroll py-2;
 }
 

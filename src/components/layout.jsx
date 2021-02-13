@@ -20,11 +20,9 @@ export default class Layout extends React.Component {
 
   componentDidMount = () => {
     const displayMode = localStorage.getItem('displayMode');
-    if (displayMode === 'dark') {
-      this.setState({
-        displayMode: 'dark'
-      });
-    }
+    this.setState({
+      displayMode: displayMode ? displayMode : 'light'
+    });
   }
 
   handleHover = () => {
