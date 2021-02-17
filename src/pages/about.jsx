@@ -7,7 +7,7 @@ const AboutPage = ({ data, path }) => (
       <h2 className="about py-3 text-5xl font-bold">about</h2>
       <div className="content-container w-full md:w-2/3">
         <p>Hello! I'm Ashley, a software engineer currently living in Austin, Texas.</p>
-        <p>I am currently working at <a href="https://www.aceable.com/" rel="noreferrer" target="_blank" className="underline">Aceable</a>,
+        <p>Right now, I am working at <a href="https://www.aceable.com/" rel="noreferrer" target="_blank" className="underline">Aceable</a>,
           an e-learning company that provides accredited licensing courses to help people achieve their goals.
         </p>
         <p>I was born in Raleigh, North Carolina, but moved to Henderson, Nevada, when I was almost eight years old.</p>
