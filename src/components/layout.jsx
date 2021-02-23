@@ -4,7 +4,7 @@ import { BsBrightnessLow, BsBrightnessLowFill } from "react-icons/bs";
 import SEO from "../components/seo";
 
 const defaultState = {
-  displayMode: 'light'
+  displayMode: "light"
 };
 
 const LayoutContext = React.createContext(defaultState);
@@ -13,15 +13,15 @@ export default class Layout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayMode: 'light',
+      displayMode: "light",
       isHoveringOnDisplayModeIcon: false
     };
   }
 
   componentDidMount = () => {
-    const displayMode = localStorage.getItem('displayMode');
+    const displayMode = localStorage.getItem("displayMode");
     this.setState({
-      displayMode: displayMode ? displayMode : 'light'
+      displayMode: displayMode ? displayMode : "light"
     });
   }
 
@@ -32,15 +32,15 @@ export default class Layout extends React.Component {
   }
 
   toggleDisplayMode = () => {
-    if (this.state.displayMode === 'light') {
-      localStorage.setItem('displayMode', 'dark');
+    if (this.state.displayMode === "light") {
+      localStorage.setItem("displayMode", "dark");
       this.setState({
-        displayMode: 'dark'
+        displayMode: "dark"
       });
-    } else if (this.state.displayMode === 'dark') {
-      localStorage.setItem('displayMode', 'light');
+    } else if (this.state.displayMode === "dark") {
+      localStorage.setItem("displayMode", "light");
       this.setState({
-        displayMode: 'light'
+        displayMode: "light"
       });
     }
   }
@@ -53,7 +53,7 @@ export default class Layout extends React.Component {
         <SEO />
         <div className={`${this.state.displayMode} flex h-screen p-2`}>
           <div className="absolute right-0 px-4 py-2">
-            <IconContext.Provider value={{ className: "display-mode__icon", size: '1.5em' }}>
+            <IconContext.Provider value={{ className: "display-mode__icon", size: "1.5em" }}>
               <div
                 role="button"
                 className="cursor-pointer"

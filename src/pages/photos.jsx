@@ -6,7 +6,7 @@ import Lightbox from '../components/lightbox.jsx'
 
 export default class PhotosPage extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       showLightbox: false,
       photoIndex: 0,

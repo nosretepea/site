@@ -1,5 +1,5 @@
 import * as React from "react";
-import Img from 'gatsby-image';
+import Img from "gatsby-image";
 
 export default class Lightbox extends React.Component {
   constructor(props) {
@@ -11,11 +11,11 @@ export default class Lightbox extends React.Component {
   }
 
   componentDidMount = () => {
-    document.addEventListener('keydown', this.detectKeyDown, false);
+    document.addEventListener("keydown", this.detectKeyDown, false);
   }
 
   componentWillUnmount = () => {
-    document.removeEventListener('keydown', this.detectKeyDown, false);
+    document.removeEventListener("keydown", this.detectKeyDown, false);
   }
 
   detectKeyDown = (e) => {
@@ -61,7 +61,7 @@ export default class Lightbox extends React.Component {
           <div className="lightbox-image__container">
             <Img
               fluid={this.props.images[this.state.currentIndex].node.childImageSharp.fluid}
-              imgStyle={{ objectFit: 'contain' }}
+              imgStyle={{ objectFit: "contain" }}
             />
           </div>
         </div>

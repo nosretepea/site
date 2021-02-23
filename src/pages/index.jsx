@@ -18,21 +18,21 @@ const IndexPage = ({ data, path }) => {
             </div>
             <div className="flex justify-center py-4">
               <Link to={`/about`} className="category about text-2xl xl:text-3xl">
-                <Tab section='about' />
+                <Tab section="about" />
               </Link>
               <Link to={`/photos`} className="category photos text-2xl xl:text-3xl">
-                <Tab section='photos' />
+                <Tab section="photos" />
               </Link>
               <a className="category resume text-2xl xl:text-3xl"
                 href="https://docs.google.com/document/d/1_qPgRIDe6HUI35ZE7yltQQK3NJYFk-iykZDMM4vYuZw/"
                 rel="noreferrer"
                 target="_blank">
-                <Tab section='résumé' />
+                <Tab section="résumé" />
               </a>
             </div>
           </div>
           <div className="flex centered justify-center bottom-0 px-4 py-3">
-            <Social height={'regular'} />
+            <Social height={"regular"} />
           </div>
         </div>
       )}

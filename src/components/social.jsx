@@ -15,17 +15,17 @@ export default class Social extends React.Component {
           <div className="flex">
             <div className={`icon icon__${this.props.height} mx-2 md:mx-4`}>
               <a href="mailto:nosretepea@gmail.com">
-                <img className="h-full" src={theme.displayMode === 'dark' ? MailDark : MailLight} alt="email" />
+                <img className="h-full" src={theme.displayMode === "dark" ? MailDark : MailLight} alt="email" />
               </a>
             </div>
             <div className={`icon icon__${this.props.height} mx-2 md:mx-4`}>
               <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ashley-peterson-24387814a/">
-                <img className="h-full" src={theme.displayMode === 'dark' ? LinkedinDark : LinkedinLight} alt="linkedin" />
+                <img className="h-full" src={theme.displayMode === "dark" ? LinkedinDark : LinkedinLight} alt="linkedin" />
               </a>
             </div>
             <div className={`icon icon__${this.props.height} mx-2 md:mx-4`}>
               <a target="_blank" rel="noreferrer" href="https://www.github.com/nosretepea">
-                <img className="h-full" src={theme.displayMode === 'dark' ? GithubDark : GithubLight} alt="github" />
+                <img className="h-full" src={theme.displayMode === "dark" ? GithubDark : GithubLight} alt="github" />
               </a>
             </div>
           </div>
