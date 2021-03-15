@@ -55,13 +55,11 @@ export default class Layout extends React.Component {
           <div className="absolute right-0 px-4 py-2">
             <IconContext.Provider value={{ className: "display-mode__icon", size: "1.5em" }}>
               <div
-                role="button"
                 className="cursor-pointer"
                 onKeyDown={this.toggleDisplayMode}
                 onClick={this.toggleDisplayMode}
                 onMouseEnter={this.handleHover}
-                onMouseLeave={this.handleHover}
-                tabIndex={0}>
+                onMouseLeave={this.handleHover}>
                 {this.state.isHoveringOnDisplayModeIcon ? <BsBrightnessLowFill /> : <BsBrightnessLow />}
               </div>
             </IconContext.Provider>
