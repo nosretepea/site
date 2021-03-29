@@ -1,5 +1,5 @@
 import * as React from "react";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default class Lightbox extends React.Component {
   constructor(props) {
@@ -48,7 +48,7 @@ export default class Lightbox extends React.Component {
 
   render() {
     return (
-      <div className="lightbox fixed z-10 left-0 top-0 w-full h-full overflow-auto">
+      <div className="lightbox fixed z-10 left-0 top-0 w-full h-full">
         <span
           role="button"
           tabIndex={0}
@@ -59,9 +59,9 @@ export default class Lightbox extends React.Component {
         </span>
         <div className="h-full flex justify-center items-center">
           <div className="lightbox-image__container">
-            <Img
-              fluid={this.props.images[this.state.currentIndex].node.childImageSharp.fluid}
-              imgStyle={{ objectFit: "contain" }}
+            <GatsbyImage
+              image={this.props.images[this.state.currentIndex].node.childImageSharp.gatsbyImageData}
+              alt=""
             />
           </div>
         </div>
