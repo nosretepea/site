@@ -40,7 +40,7 @@ export default class PhotosPage extends React.Component {
                     layout: FULL_WIDTH,
                     placeholder: BLURRED
                     transformOptions: {
-                      fit: CONTAIN
+                      fit: INSIDE
                     }
                   )
                 }

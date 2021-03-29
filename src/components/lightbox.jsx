@@ -62,6 +62,7 @@ export default class Lightbox extends React.Component {
             <GatsbyImage
               image={this.props.images[this.state.currentIndex].node.childImageSharp.gatsbyImageData}
               alt=""
+              imgStyle={{objectFit: `contain`}}
             />
           </div>
         </div>
