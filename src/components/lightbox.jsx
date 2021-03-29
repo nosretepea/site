@@ -1,5 +1,5 @@
 import * as React from "react";
-//import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default class Lightbox extends React.Component {
   constructor(props) {
@@ -57,12 +57,12 @@ export default class Lightbox extends React.Component {
           onKeyDown={() => this.props.onToggleLightbox()}>
           &times;
         </span>
-        <div className="h-full">
-          <div className="h-full">
-            {/*<Img
-              fluid={this.props.images[this.state.currentIndex].node.childImageSharp.fluid}
-              imgStyle={{ objectFit: "contain", objectPosition: "50% 50%",  }}
-            />*/}
+        <div className="h-full flex justify-center items-center">
+          <div className="lightbox-image__container">
+            <GatsbyImage
+              image={this.props.images[this.state.currentIndex].node.childImageSharp.gatsbyImageData}
+              alt=""
+            />
           </div>
         </div>
         <span role="button" tabIndex={0} className="prev" onKeyDown={(e) => this.detectKeyDown(e)} onClick={() => this.changeSlide(-1)}>&#10094;</span>

@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from "../components/footer";
-import { StaticQuery, graphql } from 'gatsby'
-import { StaticImage } from "gatsby-plugin-image";
-import Lightbox from '../components/lightbox.jsx'
+import { StaticQuery, graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import Lightbox from "../components/lightbox.jsx";
 
 export default class PhotosPage extends React.Component {
   constructor(props) {
@@ -62,8 +62,10 @@ export default class PhotosPage extends React.Component {
                       key={`img_` + index}
                       className="image"
                       onClick={() => this.handleImageClick(index)}>
-                      {/*<StaticImage src={{ ...edge.node.childImageSharp.gatsbyImageData }} />*/}
-                      {/*<Img fluid={{ ...edge.node.childImageSharp.fluid, aspectRatio: edge.node.childImageSharp.fluid.aspectRatio }} />*/}
+                      <GatsbyImage 
+                        image={{ ...edge.node.childImageSharp.gatsbyImageData }}
+                        alt=""
+                      />
                     </div>
                   ))}
                 </div>
