@@ -36,7 +36,13 @@ export default class PhotosPage extends React.Component {
             edges {
               node {
                 childImageSharp {
-                  gatsbyImageData(layout: FULL_WIDTH)
+                  gatsbyImageData(
+                    layout: FULL_WIDTH,
+                    placeholder: BLURRED
+                    transformOptions: {
+                      fit: CONTAIN
+                    }
+                  )
                 }
               }
             }
@@ -62,10 +68,10 @@ export default class PhotosPage extends React.Component {
                       key={`img_` + index}
                       className="image"
                       onClick={() => this.handleImageClick(index)}>
-                      <GatsbyImage 
-                        image={{ ...edge.node.childImageSharp.gatsbyImageData }}
-                        alt=""
-                      />
+                        <GatsbyImage
+                          image={{ ...edge.node.childImageSharp.gatsbyImageData }}
+                          alt=""
+                        />
                     </div>
                   ))}
                 </div>
