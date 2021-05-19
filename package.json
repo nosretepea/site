@@ -3,7 +3,7 @@
   "private": true,
   "description": "Ashley Peterson's personal website",
   "version": "0.1.0",
-  "author": "Ashley Peterson <nosretepea@gmail.com",
+  "author": "Ashley Peterson <nosretepea@gmail.com>",
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "gatsby": "^3.0.0",
