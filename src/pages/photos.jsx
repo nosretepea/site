@@ -55,7 +55,7 @@ export default class PhotosPage extends React.Component {
               <h2 className="photos py-3 text-5xl font-bold">photos</h2>
               <div className="content-container">
                 <p>
-                  Most photos here were taken with my Samsung Galaxy S8+, but some were--and all future ones will be--taken with my Google Pixel 5.
+                  The photos here were taken with my Samsung Galaxy S8+ and, more recently, my Google Pixel 5.
                 </p>
                 <p>
                   Click on a photograph to enlarge it.
