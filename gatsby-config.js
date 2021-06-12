@@ -52,6 +52,7 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: "www.ashleyp.io",
+        region: "us-east-2",
         protocol: "https",
         hostname: "www.ashleyp.io",
       },
