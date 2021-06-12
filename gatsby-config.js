@@ -19,13 +19,19 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
-          `Ovo\:300,400,900`,
-          `Open Sans\:300,300i,400,400i`
-        ],
-      },
+          {
+            family: 'Ovo',
+            weights: ['300', '400', '900']
+          },
+          {
+            family: 'Open Sans',
+            weights: ['300', '300i', '400', '400i']
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-sass`,
