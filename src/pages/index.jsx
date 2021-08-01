@@ -4,7 +4,7 @@ import { LayoutContext } from "../components/layout";
 import Tab from "../components/tab";
 import Social from "../components/social";
 
-const IndexPage = ({ data, path }) => {
+const IndexPage = () => {
   return (
     <LayoutContext.Consumer>
       {theme => (

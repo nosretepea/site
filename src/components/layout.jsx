@@ -72,3 +72,58 @@ export default class Layout extends React.Component {
 };
 
 export { LayoutContext };
+
+/*
+import React, { useEffect, useState } from "react";
+import GlobalContextProvider from "../util/globalContext.js";
+import { IconContext } from "react-icons";
+import { BsBrightnessLow, BsBrightnessLowFill } from "react-icons/bs";
+import SEO from "../components/seo";
+
+const Layout = ({ children }) => {
+  const [displayMode, setDisplayMode] = useState("light");
+  const [isHoveringOnDisplayModeIcon, setIsHoveringOnDisplayModeIcon] = useState(false);
+
+  useEffect(() => {
+    const displayModeFromLocalStorage = localStorage.getItem("displayMode");
+    setDisplayMode(displayModeFromLocalStorage ? displayModeFromLocalStorage : "light");
+  }, []);
+
+  const handleHover = () => {
+    setIsHoveringOnDisplayModeIcon(!isHoveringOnDisplayModeIcon);
+  }
+
+  const toggleDisplayMode = () => {
+    if (displayMode === "light") {
+      localStorage.setItem("displayMode", "dark");
+      setDisplayMode("dark");
+    } else if (displayMode === "dark") {
+      localStorage.setItem("displayMode", "light");
+      setDisplayMode("light");
+    }
+  }
+
+  return (
+    <GlobalContextProvider>
+      <SEO />
+      <div className={`${displayMode} flex h-screen p-2`}>
+        <div className="absolute right-0 px-4 py-2">
+          <IconContext.Provider value={{ className: "display-mode__icon", size: "1.5em" }}>
+            <div
+              className="cursor-pointer"
+              onKeyDown={toggleDisplayMode}
+              onClick={toggleDisplayMode}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}>
+              {isHoveringOnDisplayModeIcon ? <BsBrightnessLowFill /> : <BsBrightnessLow />}
+            </div>
+          </IconContext.Provider>
+        </div>
+        {children}
+      </div>
+    </GlobalContextProvider>
+  );
+}
+
+export default Layout;
+*/
