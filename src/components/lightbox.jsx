@@ -3,7 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 const Lightbox = (props) => {
   const [currentIndex, setCurrentIndex] = useState(props.index);
-  const [imageListLength, setImageListLength] = useState(props.images.length - 1);
+  const [imageListLength] = useState(props.images.length - 1);
 
   useEffect(() => {
     document.addEventListener("keydown", detectKeyDown);

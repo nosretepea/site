@@ -23,12 +23,12 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: 'Ovo',
-            weights: ['300', '400', '900']
+            family: "Ovo",
+            weights: ["300", "400", "900"]
           },
           {
-            family: 'Open Sans',
-            weights: ['300', '300i', '400', '400i']
+            family: "Open Sans",
+            weights: ["300", "300i", "400", "400i"]
           }
         ]
       }
