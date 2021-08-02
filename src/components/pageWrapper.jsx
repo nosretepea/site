@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../util/globalContext";
 
 const PageWrapper = ({ children }) => {
-  const { displayMode, setDisplayMode } = useContext(GlobalContext);
+  const { displayMode, setDisplayMode } = useContext(GlobalContext);;
 
   useEffect(() => {
     const displayModeFromLocalStorage = localStorage.getItem("displayMode");
