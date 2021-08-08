@@ -21,6 +21,7 @@ const Lightbox: React.FC<LightboxProps> = (props: LightboxProps): ReactElement =
   const detectKeyDown = (e: KeyboardEvent): void => {
     switch (e.key) {
       case "Esc":
+      case "Escape":
         props.onToggleLightbox();
         break;
       case "ArrowLeft":
