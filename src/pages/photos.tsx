@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, ReactElement, ReactNode, Props } from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Footer from "../components/footer";
-import Lightbox from "../components/lightbox.jsx";
+import Lightbox from "../components/lightbox";
 
-const PhotosPage = () => {
+const PhotosPage: React.FC = (): ReactElement => {
   const [showLightbox, setShowLightbox] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  const handleImageClick = (index) => {
+  const handleImageClick = (index: number): void => {
     setPhotoIndex(index);
     toggleLightbox();
   }
 
-  const toggleLightbox = () => {
+  const toggleLightbox = (): void => {
     setShowLightbox(!showLightbox);
   }
 
@@ -50,7 +50,7 @@ const PhotosPage = () => {
                 Click on a photograph to enlarge it.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 md:gap-2">
-                {data.allFile.edges.map((edge, index) => (
+                {data.allFile.edges.map((edge: { node: { childImageSharp: { gatsbyImageData: IGatsbyImageData; }; }; }, index: number) => (
                   <div
                     role="button"
                     tabIndex={index}
@@ -75,3 +75,5 @@ const PhotosPage = () => {
 }
 
 export default PhotosPage;
+
+

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Link } from "gatsby";
 import Tab from "../components/tab";
 import Social from "../components/social";
 
-const IndexPage = () => {
+const IndexPage: React.FC = (): ReactElement => {
   return (
     <>
       <div className="flex flex-grow flex-col justify-center">

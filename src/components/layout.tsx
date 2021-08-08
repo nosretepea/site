@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactElement, ReactNode } from "react";
 import GlobalContextProvider from "../util/globalContext";
 import PageWrapper from "./pageWrapper";
 import Seo from "./seo";
 import DisplayModeButton from "./displayModeButton";
 
-const Layout = ({ children }) => {
+const Layout: React.FC = ({ children }): ReactElement => {
   return (
     <GlobalContextProvider>
       <Seo />

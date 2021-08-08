@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Footer from "../components/footer";
 
-const AboutPage = () => (
+const AboutPage: React.FC = (): ReactElement => (
   <div className="w-full flex justify-center items-center">
     <div className="h-auto md:h-4/5 w-full lg:w-5/6 xl:w-4/5 mx-auto px-4">
       <h2 className="about py-3 text-5xl font-bold">about</h2>

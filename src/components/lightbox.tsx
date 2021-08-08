@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, ReactElement } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-const Lightbox = (props) => {
+type LightboxProps = {
+  index: number,
+  images: any,
+  onToggleLightbox: any
+}
+
+const Lightbox: React.FC<LightboxProps> = (props: LightboxProps): ReactElement => {
   const [currentIndex, setCurrentIndex] = useState(props.index);
   const [imageListLength] = useState(props.images.length - 1);
 
@@ -12,22 +18,22 @@ const Lightbox = (props) => {
     }
   })
 
-  const detectKeyDown = (e) => {
-    switch (e.keyCode) {
-      case 27:
+  const detectKeyDown = (e: KeyboardEvent): void => {
+    switch (e.key) {
+      case "Esc":
         props.onToggleLightbox();
         break;
-      case 37:
+      case "ArrowLeft":
         changeSlide(-1);
         break;
-      case 39:
+      case "ArrowRight":
         changeSlide(1);
         break;
       default:
     }
   }
 
-  const changeSlide = (direction) => {
+  const changeSlide = (direction: number): void => {
     const newIndex = currentIndex + direction;
     if (newIndex === -1) {  // if we're going out-of-bounds to the left of the array, go to the end instead
       setCurrentIndex(imageListLength);

@@ -1,16 +1,16 @@
-import React, { useContext } from "react";
+import React, { ReactElement, useContext } from "react";
 import { IconContext } from "react-icons";
 import { BsBrightnessLow, BsBrightnessLowFill } from "react-icons/bs";
 import { GlobalContext } from "../util/globalContext";
 
-const DisplayModeButton = () => {
+const DisplayModeButton: React.FC = (): ReactElement => {
   const { displayMode, setDisplayMode, isHoveringOnDisplayModeIcon, setIsHoveringOnDisplayModeIcon } = useContext(GlobalContext);
 
-  const handleHover = () => {
+  const handleHover = (): void => {
     setIsHoveringOnDisplayModeIcon(!isHoveringOnDisplayModeIcon);
   }
 
-  const toggleDisplayMode = () => {
+  const toggleDisplayMode = (): void => {
     if (displayMode === "light") {
       localStorage.setItem("displayMode", "dark");
       setDisplayMode("dark");

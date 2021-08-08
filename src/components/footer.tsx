@@ -1,7 +1,7 @@
-import * as React from "react";
+import React, { ReactElement } from "react";
 import { Link } from "gatsby";
 
-const Footer = () => (
+const Footer: React.FC = (): ReactElement => (
   <div className="footer w-full fixed z-1 bottom-0 p-4">
     <div className="mx-auto flex justify-center items-center w-full">
       <div className="text-lg">

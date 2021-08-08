@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    defaultTitle: `Ashley Peterson`,
-    defaultDescription: `Ashley Peterson's personal website`,
-    defaultImage: `/flower.jpg`,
-    siteUrl: `https://www.ashleyp.io`,
+    title: `Ashley Peterson`,
+    description: `Ashley Peterson's personal website`,
+    image: `/ashley.jpg`,
+    url: `https://www.ashleyp.io`,
     author: `@nosretepea`,
   },
   plugins: [
@@ -29,7 +29,7 @@ module.exports = {
           {
             family: "Open Sans",
             weights: ["300", "300i", "400", "400i"]
-          }
+          },
         ]
       }
     },
@@ -38,14 +38,14 @@ module.exports = {
       options: {
         postCssPlugins: [
           require("tailwindcss"),
-          require("./tailwind.config.js")
+          require("./tailwind.config.js"),
         ],
       },
     },
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/components/layout.jsx`),
+        component: require.resolve(`./src/components/layout.tsx`),
       },
     },
     {
@@ -62,6 +62,14 @@ module.exports = {
       options: {
         siteUrl: "https://www.ashleyp.io",
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        jsxPragma: `jsx`,
+        allExtensions: true,
+      },
+    },
   ],
 }

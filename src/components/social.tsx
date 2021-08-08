@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, ReactElement } from "react";
 import { GlobalContext } from "../util/globalContext";
 import GithubDark from "../assets/github-dark.png";
 import GithubLight from "../assets/github-light.png";
@@ -7,7 +7,11 @@ import MailLight from "../assets/mail-light.png";
 import LinkedinDark from "../assets/linkedin-dark.png";
 import LinkedinLight from "../assets/linkedin-light.png";
 
-const Social = (props) => {
+type SocialProps = {
+  height: string,
+}
+
+const Social: React.FC<SocialProps> = (props: SocialProps): ReactElement => {
   const { displayMode } = useContext(GlobalContext);
 
   return (

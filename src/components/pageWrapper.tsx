@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, ReactElement } from "react";
 import { GlobalContext } from "../util/globalContext";
 
-const PageWrapper = ({ children }) => {
-  const { displayMode, setDisplayMode } = useContext(GlobalContext);;
+const PageWrapper: React.FC = ({ children }): ReactElement => {
+  const { displayMode, setDisplayMode } = useContext(GlobalContext);
 
   useEffect(() => {
     const displayModeFromLocalStorage = localStorage.getItem("displayMode");
