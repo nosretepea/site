@@ -8,10 +8,10 @@ const Footer: React.FC = (): ReactElement => (
         <Link to={`/`} className="footer__link home mx-2 md:mx-4">
           <span>home</span>
         </Link>
-        <Link to={`/about`} className="footer__link about mx-2 md:mx-4">
+        <Link to={`/about/`} className="footer__link about mx-2 md:mx-4">
           <span>about</span>
         </Link>
-        <Link to={`/photos`} className="footer__link photos mx-2 md:mx-4">
+        <Link to={`/photos/`} className="footer__link photos mx-2 md:mx-4">
           <span>photos</span>
         </Link>
         <a className="footer__link resume mx-2 md:mx-4"

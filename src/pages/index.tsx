@@ -15,10 +15,10 @@ const IndexPage: React.FC = (): ReactElement => {
             </p>
           </div>
           <div className="flex justify-center py-4">
-            <Link to={`/about`} className="category about text-2xl xl:text-3xl">
+            <Link to={`/about/`} className="category about text-2xl xl:text-3xl">
               <Tab section="about" />
             </Link>
-            <Link to={`/photos`} className="category photos text-2xl xl:text-3xl">
+            <Link to={`/photos/`} className="category photos text-2xl xl:text-3xl">
               <Tab section="photos" />
             </Link>
             <a className="category resume text-2xl xl:text-3xl"

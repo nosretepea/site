@@ -11,6 +11,7 @@ const Lightbox: React.FC<LightboxProps> = (props: LightboxProps): ReactElement =
   const [currentIndex, setCurrentIndex] = useState(props.index);
   const [imageListLength] = useState(props.images.length - 1);
 
+  // TODO: fix event listener error
   useEffect(() => {
     document.addEventListener("keydown", detectKeyDown);
     return () => {
@@ -18,7 +19,7 @@ const Lightbox: React.FC<LightboxProps> = (props: LightboxProps): ReactElement =
     }
   })
 
-  const detectKeyDown = (e: KeyboardEvent): void => {
+  const detectKeyDown = (e: React.KeyboardEvent): void => {
     switch (e.key) {
       case "Esc":
       case "Escape":
