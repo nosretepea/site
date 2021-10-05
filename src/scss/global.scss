@@ -135,7 +135,12 @@ h6,
 
 .content-container {
   max-height: 600px;
+  margin-bottom: 60px;
   @apply overflow-y-scroll py-2;
+}
+
+.about-photo {
+  max-width: 460px;
 }
 
 .image {
