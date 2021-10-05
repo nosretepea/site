@@ -8,11 +8,11 @@ const AboutPage: React.FC = (): ReactElement => (
       <h2 className="about py-3 text-5xl font-bold">about</h2>
       <div className="content-container w-full flex flex-col md:flex-row items-start xl:w-5/6">
         <div className="w-1/3 pt-2 pr-5 hidden md:block">
-          <img className="rounded" src={AshleyPhoto} width="345" height="460" />
+          <img className="rounded-lg" src={AshleyPhoto} width="345" height="460" />
         </div>
         <div className="w-full md:w-2/3">
           <p>Hello! I'm Ashley, a software engineer currently living in Austin, Texas.</p>
-          <p>Right now, I am working at <a href="https://www.aceable.com/" rel="noreferrer nofollow noopener" target="_blank" className="underline">Aceable</a>,
+          <p>Right now, I am working at <a href="https://www.aceable.com/" rel="noreferrer nofollow noopener" target="_blank" className="link">Aceable</a>,
             an e-learning company that provides accredited licensing courses to help people achieve their goals.
           </p>
           <p>I was born in Raleigh, North Carolina, but moved to Henderson, Nevada, when I was almost eight years old.</p>
@@ -26,7 +26,7 @@ const AboutPage: React.FC = (): ReactElement => (
           </p>
           <p>
             Listening to music and going to concerts are other favorite activities of mine. Check out what I've been listening to lately on&nbsp;
-            <a href="https://last.fm/user/oceanseacrest" rel="noreferrer nofollow noopener" target="_blank" className="underline">Last.fm</a>!
+            <a href="https://last.fm/user/oceanseacrest" rel="noreferrer nofollow noopener" target="_blank" className="link">Last.fm</a>!
           </p>
         </div>
       </div>

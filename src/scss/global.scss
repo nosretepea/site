@@ -49,6 +49,12 @@ p {
   .footer {
     @apply bg-white;
   }
+
+  .link {
+    &:hover {
+      @apply bg-black text-white;
+    }
+  }
 }
 
 .dark {
@@ -81,6 +87,12 @@ p {
 
   .footer {
     @apply bg-dark-300;
+  }
+
+  .link {
+    &:hover {
+      @apply bg-white text-black;
+    }
   }
 }
 
@@ -141,6 +153,10 @@ h6,
 
 .about-photo {
   max-width: 460px;
+}
+
+.link {
+  @apply underline;
 }
 
 .image {

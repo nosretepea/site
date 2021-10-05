@@ -60,6 +60,7 @@ const PhotosPage: React.FC = (): ReactElement => {
                     <GatsbyImage
                       image={{ ...edge.node.childImageSharp.gatsbyImageData }}
                       alt=""
+                      className="rounded-sm"
                     />
                   </div>
                 ))}
