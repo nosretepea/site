@@ -44,7 +44,7 @@ const PhotosPage: React.FC = (): ReactElement => {
             <h2 className="photos py-3 text-5xl font-bold">photos</h2>
             <div className="content-container">
               <p>
-                The photos here were taken with my Samsung Galaxy S8+ and, more recently, my Google Pixel 5.
+                The photos here were taken with either my Google Pixel 5 or my old Samsung Galaxy S8+.
               </p>
               <p>
                 Click on a photograph to enlarge it.
