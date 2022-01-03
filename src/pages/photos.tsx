@@ -47,7 +47,7 @@ const PhotosPage: React.FC = (): ReactElement => {
                 The photos here were taken with either my Google Pixel 5 or my old Samsung Galaxy S8+.
               </p>
               <p>
-                Click on a photograph to open a slideshow.
+                Click on a photograph to open the slideshow view.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 md:gap-2">
                 {data.allFile.edges.map((edge: { node: { childImageSharp: { gatsbyImageData: IGatsbyImageData; }; }; }, index: number) => (
