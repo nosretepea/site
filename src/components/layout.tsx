@@ -4,7 +4,7 @@ import PageWrapper from "./pageWrapper";
 import Seo from "./seo";
 import DisplayModeButton from "./displayModeButton";
 
-const Layout: React.FC = ({ children }): ReactElement => {
+const Layout: React.FC<any> = ({ children }): ReactElement => {
   return (
     <GlobalContextProvider>
       <Seo />

@@ -6,8 +6,8 @@ import { GlobalContext } from "../util/globalContext";
 const DisplayModeButton: React.FC = (): ReactElement => {
   const { displayMode, setDisplayMode, isHoveringOnDisplayModeIcon, setIsHoveringOnDisplayModeIcon } = useContext(GlobalContext);
 
-  const handleHover = (): void => {
-    setIsHoveringOnDisplayModeIcon(!isHoveringOnDisplayModeIcon);
+  const handleHover = (isHover: boolean): void => {
+    setIsHoveringOnDisplayModeIcon(isHover);
   }
 
   const toggleDisplayMode = (): void => {
@@ -26,8 +26,8 @@ const DisplayModeButton: React.FC = (): ReactElement => {
         className={`${displayMode} cursor-pointer`}
         onKeyDown={() => toggleDisplayMode()}
         onClick={() => toggleDisplayMode()}
-        onMouseEnter={() => handleHover()}
-        onMouseLeave={() => handleHover()}>
+        onMouseEnter={() => handleHover(true)}
+        onMouseLeave={() => handleHover(false)}>
         {isHoveringOnDisplayModeIcon ? <BsBrightnessLowFill /> : <BsBrightnessLow />}
       </div>
     </IconContext.Provider>

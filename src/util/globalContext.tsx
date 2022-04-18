@@ -37,7 +37,7 @@ function reducer(state: State, action: Action) {
   }
 }
 
-const GlobalContextProvider: React.FC = ({ children }) => {
+const GlobalContextProvider: React.FC<any> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialValues);
 
   return <GlobalContext.Provider

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, ReactElement } from "react";
 import { GlobalContext } from "../util/globalContext";
 
-const PageWrapper: React.FC = ({ children }): ReactElement => {
+const PageWrapper: React.FC<any> = ({ children }): ReactElement => {
   const { displayMode, setDisplayMode } = useContext(GlobalContext);
 
   useEffect(() => {
