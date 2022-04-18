@@ -12,8 +12,8 @@ const AboutPage: React.FC = (): ReactElement => (
         </div>
         <div className="w-full md:w-2/3">
           <p>Hello! I'm Ashley, a software engineer currently living in Austin, Texas.</p>
-          <p>Right now, I am working at <a href="https://www.aceable.com/" rel="noreferrer nofollow noopener" target="_blank" className="link">Aceable</a>,
-            an e-learning company that provides accredited licensing courses to help people achieve their goals.
+          <p>Right now, I am working at <a href="https://www.lattice.com/" rel="noreferrer nofollow noopener" target="_blank" className="link">Lattice</a>,
+            a company whose people success platform helps organizations develop, grow, and engage with their employees.
           </p>
           <p>I was born in Raleigh, North Carolina, but moved to Henderson, Nevada, when I was almost eight years old.</p>
           <p>

@@ -1,4 +1,7 @@
-module.exports = {
+import type { GatsbyConfig } from "gatsby";
+import path from "path";
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Ashley Peterson`,
     description: `Ashley Peterson's personal website`,
@@ -12,7 +15,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: path.resolve(`src/images`),
       },
     },
     `gatsby-plugin-image`,
@@ -45,7 +48,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/components/layout.tsx`),
+        component: path.resolve(`./src/components/layout.tsx`),
       },
     },
     {
@@ -73,3 +76,4 @@ module.exports = {
     },
   ],
 }
+export default config;

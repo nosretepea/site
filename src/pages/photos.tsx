@@ -1,4 +1,4 @@
-import React, { useState, ReactElement, ReactNode, Props } from "react";
+import React, { useState, ReactElement } from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Footer from "../components/footer";
@@ -21,16 +21,18 @@ const PhotosPage: React.FC = (): ReactElement => {
     <StaticQuery
       query={graphql`
         query {
-          allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "photography"}} sort: {fields: [name], order: DESC}) {
+          allFile(
+            filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "photography"}}
+            sort: {fields: name, order: DESC}
+          ) {
             edges {
               node {
                 childImageSharp {
                   gatsbyImageData(
-                    layout: FULL_WIDTH,
+                    quality: 70
+                    layout: CONSTRAINED
                     placeholder: BLURRED
-                    transformOptions: {
-                      fit: INSIDE
-                    }
+                    transformOptions: {fit: INSIDE}
                   )
                 }
               }
