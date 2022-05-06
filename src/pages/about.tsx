@@ -21,7 +21,7 @@ const AboutPage: React.FC = (): ReactElement => (
             Texas.
           </p>
           <p>
-            Right now, I am working at
+            Right now, I am working at{" "}
             <a
               href="https://www.lattice.com/"
               rel="noreferrer nofollow noopener"
