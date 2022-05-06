@@ -1,6 +1,6 @@
-import React, { ReactElement } from "react"
-import Footer from "../components/footer"
-import AshleyPhoto from "../../static/ashley.jpg"
+import React, { ReactElement } from "react";
+import Footer from "../components/footer";
+import AshleyPhoto from "../../static/ashley.jpg";
 
 const AboutPage: React.FC = (): ReactElement => (
   <div className="w-full flex justify-center items-center">
@@ -66,6 +66,6 @@ const AboutPage: React.FC = (): ReactElement => (
     </div>
     <Footer />
   </div>
-)
+);
 
-export default AboutPage
+export default AboutPage;

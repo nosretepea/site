@@ -169,17 +169,19 @@ h6,
 
 .prev,
 .next {
-  @apply cursor-pointer absolute p-4 bg-transparent border-none text-white text-3xl top-1/2;
+  @apply cursor-pointer absolute p-8 border-none text-white top-1/2;
+}
+
+.close {
+  @apply cursor-pointer absolute p-8 border-none text-white;
 }
 
 .prev {
   @apply left-0;
-  border-radius: 0 3px 3px 0;
 }
 
 .next {
   @apply right-0;
-  border-radius: 3px 0 0 3px;
 }
 
 @keyframes slide-up {
