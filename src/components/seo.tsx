@@ -42,6 +42,7 @@ const Seo: React.FC<SeoProps> = ({ meta = [] }: SeoProps): ReactElement => {
 
   return (
     <Helmet
+      htmlAttributes={{ lang: 'en' }}
       title={site.siteMetadata?.title}
       meta={[
         {

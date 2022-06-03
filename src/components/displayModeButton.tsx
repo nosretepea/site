@@ -23,6 +23,7 @@ const DisplayModeButton: React.FC = (): ReactElement => {
   return (
     <IconContext.Provider value={{ className: "display-mode__icon", size: "1.5em" }}>
       <button
+        name="light dark mode toggle"
         className={`display-btn ${displayMode} cursor-pointer`}
         onClick={() => toggleDisplayMode()}
         onMouseEnter={() => handleHover(true)}
