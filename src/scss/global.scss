@@ -14,7 +14,7 @@ p {
   @apply py-1;
 }
 
-*:focus {
+*:focus-visible {
   outline: 0 !important;
 }
 
@@ -32,18 +32,30 @@ p {
 
   .home {
     @apply text-cerulean;
+    &:focus-visible {
+      @apply border border-solid border-2 border-cerulean rounded-md;
+    }
   }
 
   .about {
     @apply text-tangerine;
+        &:focus-visible {
+      @apply border border-solid border-2 border-tangerine rounded-md;
+    }
   }
 
   .photos {
     @apply text-grass;
+        &:focus-visible {
+      @apply border border-solid border-2 border-grass rounded-md;
+    }
   }
 
   .resume {
     @apply text-rose;
+      &:focus-visible {
+      @apply border border-solid border-2 border-rose rounded-md;
+    }
   }
 
   .footer {
@@ -53,6 +65,27 @@ p {
   .link {
     &:hover {
       @apply bg-black text-white;
+    }
+  }
+
+  .link, .icon-link, .display-btn {
+    &:focus-visible {
+      @apply border border-solid border-2 border-black rounded-md;
+    }
+  }
+
+  .icon-link {
+    &:focus-visible {
+      @apply inline-block;
+    }
+  }
+
+  .image > picture > img {
+    &:focus-visible {
+      @apply border border-solid border-2 border-black rounded-md;
+      border-bottom: 18px solid black;
+      border-bottom-left-radius: 0.375rem;
+      border-bottom-right-radius: 0.375rem;
     }
   }
 }
@@ -71,18 +104,30 @@ p {
 
   .home {
     @apply text-steel;
+    &:focus-visible {
+      @apply border border-solid border-2 border-steel rounded-md;
+    }
   }
 
   .about {
     @apply text-cantaloupe;
+    &:focus-visible {
+      @apply border border-solid border-2 border-cantaloupe rounded-md;
+    }
   }
 
   .photos {
     @apply text-mint;
+    &:focus-visible {
+      @apply border border-solid border-2 border-mint rounded-md;
+    }
   }
 
   .resume {
     @apply text-coral;
+    &:focus-visible {
+      @apply border border-solid border-2 border-coral rounded-md;
+    }
   }
 
   .footer {
@@ -92,6 +137,27 @@ p {
   .link {
     &:hover {
       @apply bg-white text-black;
+    }
+  }
+
+  .link, .icon-link, .display-btn {
+    &:focus-visible {
+      @apply border border-solid border-2 border-white rounded-md;
+    }
+  }
+
+  .icon-link {
+    &:focus-visible {
+      @apply inline-block;
+    }
+  }
+
+  .image > picture > img {
+    &:focus-visible {
+      @apply border border-solid border-2 border-white rounded-md;
+      border-bottom: 18px solid white;
+      border-bottom-left-radius: 0.375rem;
+      border-bottom-right-radius: 0.375rem;
     }
   }
 }
@@ -170,10 +236,22 @@ h6,
 .prev,
 .next {
   @apply cursor-pointer absolute p-8 border-none text-white top-1/2;
+
+  &:focus-visible {
+    svg {
+      @apply border border-solid border-2 border-white rounded-md;
+    }
+  }
 }
 
 .close {
   @apply cursor-pointer absolute p-8 border-none text-white;
+
+  &:focus-visible {
+    svg {
+      @apply border border-solid border-2 border-white rounded-md;
+    }
+  }
 }
 
 .prev {

@@ -43,9 +43,9 @@ const AboutPage: React.FC = (): ReactElement => (
             Science in Computer Science and a Minor in Writing.
           </p>
           <p>
-            When I'm not programming, I'm usually running around Lady Bird Lake,
-            taking a leisurely walk, or cooking a new recipe. Recently, my focus
-            has been on making more vegetarian dishes.
+            When I'm not programming, I'm usually running or walking around Lady Bird Lake,
+            cooking/baking a new recipe, browsing the internet for way too long,
+            or watching reality competition shows on TV.
           </p>
           <p>
             Listening to music and going to concerts are other favorite

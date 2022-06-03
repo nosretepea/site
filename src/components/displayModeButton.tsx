@@ -22,14 +22,13 @@ const DisplayModeButton: React.FC = (): ReactElement => {
 
   return (
     <IconContext.Provider value={{ className: "display-mode__icon", size: "1.5em" }}>
-      <div
-        className={`${displayMode} cursor-pointer`}
-        onKeyDown={() => toggleDisplayMode()}
+      <button
+        className={`display-btn ${displayMode} cursor-pointer`}
         onClick={() => toggleDisplayMode()}
         onMouseEnter={() => handleHover(true)}
         onMouseLeave={() => handleHover(false)}>
         {isHoveringOnDisplayModeIcon ? <BsBrightnessLowFill /> : <BsBrightnessLow />}
-      </div>
+      </button>
     </IconContext.Provider>
   );
 }

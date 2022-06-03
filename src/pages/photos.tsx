@@ -8,6 +8,12 @@ const PhotosPage: React.FC = (): ReactElement => {
   const [showLightbox, setShowLightbox] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
+  const handleImageKeyDown = (e: React.KeyboardEvent, index: number): void => {
+    if (e.key === 'Enter') {
+      handleImageClick(index);
+    }
+  }
+
   const handleImageClick = (index: number): void => {
     setPhotoIndex(index);
     toggleLightbox();
@@ -69,12 +75,13 @@ const PhotosPage: React.FC = (): ReactElement => {
                     <GatsbyImage
                       key={`img_` + index}
                       role="button"
-                      tabIndex={index}
+                      tabIndex={0}
                       image={{ ...edge.node.childImageSharp.gatsbyImageData }}
                       imgStyle={{ height: "300px" }}
                       alt=""
                       className="image rounded-sm"
                       onClick={() => handleImageClick(index)}
+                      onKeyDown={(e) => handleImageKeyDown(e, index)}
                     />
                   )
                 )}

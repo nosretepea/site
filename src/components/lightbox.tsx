@@ -16,13 +16,13 @@ const Lightbox: React.FC<LightboxProps> = (props: LightboxProps): ReactElement =
 
   // TODO: fix event listener error
   useEffect(() => {
-    document.addEventListener("keydown", detectKeyDown);
+    window.addEventListener("keydown", detectKeyDown, false);
     return () => {
-      document.removeEventListener("keydown", detectKeyDown);
+      window.removeEventListener("keydown", detectKeyDown, false);
     }
   })
 
-  const detectKeyDown = (e: React.KeyboardEvent): void => {
+  const detectKeyDown = (e: KeyboardEvent): void => {
     switch (e.key) {
       case "Esc":
       case "Escape":
@@ -73,8 +73,8 @@ const Lightbox: React.FC<LightboxProps> = (props: LightboxProps): ReactElement =
       <IconContext.Provider value={{ size: "3em" }}>
         <span
           tabIndex={0}
+          role="button"
           className="prev"
-          onKeyDown={(e) => detectKeyDown(e)}
           onClick={() => changeSlide(-1)}>
             <IoIosArrowBack/>
           </span>
@@ -82,8 +82,8 @@ const Lightbox: React.FC<LightboxProps> = (props: LightboxProps): ReactElement =
       <IconContext.Provider value={{ size: "3em" }}>
         <span
           tabIndex={0}
+          role="button"
           className="next"
-          onKeyDown={(e) => detectKeyDown(e)}
           onClick={() => changeSlide(1)}>
             <IoIosArrowForward/>
           </span>
