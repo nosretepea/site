@@ -1,26 +1,26 @@
-import React, { useState, ReactElement } from "react";
-import { StaticQuery, graphql } from "gatsby";
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
-import Footer from "../components/footer";
-import Lightbox from "../components/lightbox";
+import React, { useState, ReactElement } from "react"
+import { StaticQuery, graphql } from "gatsby"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import Footer from "../components/footer"
+import Lightbox from "../components/lightbox"
 
 const PhotosPage: React.FC = (): ReactElement => {
-  const [showLightbox, setShowLightbox] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
+  const [showLightbox, setShowLightbox] = useState(false)
+  const [photoIndex, setPhotoIndex] = useState(0)
 
   const handleImageKeyDown = (e: React.KeyboardEvent, index: number): void => {
-    if (e.key === 'Enter') {
-      handleImageClick(index);
+    if (e.key === "Enter") {
+      handleImageClick(index)
     }
   }
 
   const handleImageClick = (index: number): void => {
-    setPhotoIndex(index);
-    toggleLightbox();
+    setPhotoIndex(index)
+    toggleLightbox()
   }
 
   const toggleLightbox = (): void => {
-    setShowLightbox(!showLightbox);
+    setShowLightbox(!showLightbox)
   }
 
   return (
@@ -60,8 +60,7 @@ const PhotosPage: React.FC = (): ReactElement => {
               </p>
               <p>Click on a photograph to open the slideshow view.</p>
               <div
-                className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 md:gap-2"
-                style={{ gridAutoRows: "300px" }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-2"
               >
                 {data.allFile.edges.map(
                   (
@@ -72,17 +71,23 @@ const PhotosPage: React.FC = (): ReactElement => {
                     },
                     index: number
                   ) => (
-                    <GatsbyImage
+                    <div
                       key={`img_` + index}
+                      className="m-1"
                       role="button"
-                      tabIndex={0}
-                      image={{ ...edge.node.childImageSharp.gatsbyImageData }}
-                      imgStyle={{ height: "300px" }}
-                      alt=""
-                      className="image rounded-sm"
                       onClick={() => handleImageClick(index)}
-                      onKeyDown={(e) => handleImageKeyDown(e, index)}
-                    />
+                      onKeyDown={e => handleImageKeyDown(e, index)}
+                    >
+                      <GatsbyImage
+                        tabIndex={0}
+                        style={{
+                          height: "300px",
+                        }}
+                        className="image rounded-sm"
+                        image={{ ...edge.node.childImageSharp.gatsbyImageData }}
+                        alt=""
+                      />
+                    </div>
                   )
                 )}
               </div>
@@ -99,7 +104,7 @@ const PhotosPage: React.FC = (): ReactElement => {
         </div>
       )}
     />
-  );
+  )
 }
 
-export default PhotosPage;
+export default PhotosPage

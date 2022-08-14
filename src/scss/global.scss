@@ -39,21 +39,21 @@ p {
 
   .about {
     @apply text-tangerine;
-        &:focus-visible {
+    &:focus-visible {
       @apply border border-solid border-2 border-tangerine rounded-md;
     }
   }
 
   .photos {
     @apply text-grass;
-        &:focus-visible {
+    &:focus-visible {
       @apply border border-solid border-2 border-grass rounded-md;
     }
   }
 
   .resume {
     @apply text-rose;
-      &:focus-visible {
+    &:focus-visible {
       @apply border border-solid border-2 border-rose rounded-md;
     }
   }
@@ -83,9 +83,6 @@ p {
   .image > picture > img {
     &:focus-visible {
       @apply border border-solid border-2 border-black rounded-md;
-      border-bottom: 18px solid black;
-      border-bottom-left-radius: 0.375rem;
-      border-bottom-right-radius: 0.375rem;
     }
   }
 }
@@ -155,9 +152,6 @@ p {
   .image > picture > img {
     &:focus-visible {
       @apply border border-solid border-2 border-white rounded-md;
-      border-bottom: 18px solid white;
-      border-bottom-left-radius: 0.375rem;
-      border-bottom-right-radius: 0.375rem;
     }
   }
 }
@@ -226,7 +220,7 @@ h6,
 }
 
 .image {
-  @apply cursor-pointer m-2;
+  @apply cursor-pointer;
 }
 
 .lightbox {
