@@ -55,8 +55,8 @@ const PhotosPage: React.FC = (): ReactElement => {
             <h2 className="photos py-3 text-5xl font-bold">photos</h2>
             <div className="content-container">
               <p>
-                The photos here were taken with either my Google Pixel 5 or my
-                old Samsung Galaxy S8+.
+                The photos here were taken with whatever phone I had at the time (for what's here,
+                a Samsung Galaxy S8+ and Google Pixel 5).
               </p>
               <p>Click on a photograph to open the slideshow view.</p>
               <div
